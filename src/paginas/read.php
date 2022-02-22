@@ -3,7 +3,7 @@ require_once '../../config.php';
 require_once '../acoes/usuario.php';
 require_once '../modulos/mensagens.php';
 
-$usuario = readUserAction($coneccao);
+$usuario = readUsuario($coneccao);
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ $usuario = readUserAction($coneccao);
                     <td class="user-name"><?=$row['nome']?></td>
                     <td class="user-email"><?=$row['email']?></td>
                     <td>
-                        <a class="btn btn-primary text-white" href="./edit.php?id=<?=$row['id']?>">Editar</a>
+                        <a class="btn btn-primary text-white" href="./update.php?id=<?=$row['id']?>">Editar</a>
                     </td>
                     <td>
                         <a class="btn btn-danger text-white" href="./delete.php?id=<?=$row['id']?>">Remover</a>
