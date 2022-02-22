@@ -1,7 +1,7 @@
 <?php
-require_once 'C:/xampp/htdocs/CRUD/CRUD-php/config.php';
-require_once 'C:/xampp/htdocs/CRUD/CRUD-php/src/acoes/usuario.php';
-require_once 'C:/xampp/htdocs/CRUD/CRUD-php/src/modulos/mensagens.php';
+require_once '../../config.php';
+require_once '../acoes/usuario.php';
+require_once '../modulos/mensagens.php';
 
 $usuario = readUserAction($coneccao);
 
@@ -19,7 +19,7 @@ $usuario = readUserAction($coneccao);
         <div class="container">
             <div class="row">
                 <a href="../../"><h1>Usuarios - Read</h1></a>
-                <a class="btn btn-success text-white" href="./create.php">New</a>
+                <a class="btn btn-success text-white" href="./create.php">Novo</a>
             </div>
             <div class="row flex-center">
                 <?php if(isset($_GET['message'])) echo(printMessage($_GET['message'])); ?>
@@ -30,7 +30,7 @@ $usuario = readUserAction($coneccao);
                     <th>NOME</th>
                     <th>EMAIL</th>
                 </tr>
-                <?php foreach($users as $row): ?>
+                <?php foreach($usuario as $row): ?>
                 <tr>
                     <td class="user-name"><?=$row['nome']?></td>
                     <td class="user-email"><?=$row['email']?></td>
