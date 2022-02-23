@@ -2,7 +2,8 @@
 require_once '../../config.php';
 require_once '../acoes/usuario.php';
 
-updateUsuario($coneccao, $_POST["id"], $_POST["nome"], $_POST["email"]);
+if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["id"]))
+    updateUsuario($coneccao, $_POST["id"], $_POST["nome"], $_POST["email"]);
 
 $usuario = buscarUsuario($coneccao, $_GET['id']);
 

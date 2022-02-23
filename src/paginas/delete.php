@@ -2,7 +2,8 @@
 require_once '../../config.php';
 require_once '../acoes/usuario.php';
 
-deleteUsuario($connecao, $_POST['id']);
+if(isset($_POST['id']))
+    deleteUsuario($connecao, $_POST['id']);
 
 ?>
 

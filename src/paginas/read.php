@@ -22,7 +22,7 @@ $usuario = readUsuario($coneccao);
                 <a class="btn btn-success text-white" href="./create.php">Novo</a>
             </div>
             <div class="row flex-center">
-                <?php if(isset($_GET['message'])) echo(printMessage($_GET['message'])); ?>
+                <?php if(isset($_GET['mensagem'])) echo(printMessage($_GET['mensagem'])); ?>
             </div>
 
             <table class="table-users">

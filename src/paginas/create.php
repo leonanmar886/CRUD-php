@@ -2,7 +2,8 @@
 require_once '../../config.php';
 require_once '../acoes/usuario.php';
 
-createUsuario($coneccao, $_POST["nome"], $_POST["email"]);
+if (isset($_POST["nome"]) && isset($_POST["email"]))
+    createUsuario($coneccao, $_POST["nome"], $_POST["email"]);
 ?>
 
 <!DOCTYPE html>
