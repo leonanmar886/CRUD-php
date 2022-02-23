@@ -15,7 +15,7 @@ $usuario = buscarUsuario($coneccao, $_GET['id']);
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="<?= $host ?>/css/style.css">
+        <link rel="stylesheet" href="../../css/style.css">
         <title>CRUD PHP</title>
     </head>
     <body>
@@ -26,12 +26,12 @@ $usuario = buscarUsuario($coneccao, $_GET['id']);
         </div>
             <div class="row flex-center">
                 <div class="form-div">
-                    <form class="form" action="../../paginas/update.php" method="POST">
+                    <form class="form" action="../paginas/update.php" method="POST">
                         <input type="hidden" name="id" value="<?=$usuario['id']?>" required/>
                         <label>Nome</label>
-                        <input type="text" name="nome" value="<?$usuario['nome']?>" required/>
+                        <input type="text" name="nome" value="<?=$usuario['nome']?>" required/>
                         <label>E-mail</label>
-                        <input type="email" name="email" value="<?$usuario['email']?>" required/>
+                        <input type="email" name="email" value="<?=$usuario['email']?>" required/>
 
                         <button class="btn btn-success text-white" type="submit">Salvar</button>
                     </form>

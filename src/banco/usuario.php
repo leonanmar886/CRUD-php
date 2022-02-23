@@ -45,7 +45,7 @@ function readUsuarioBD($coneccao){
     $quantidadeRegistros = mysqli_num_rows($resultado);
 
     if ($quantidadeRegistros > 0) 
-        mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+        $usuarios = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
     
     mysqli_close($coneccao);
     return $usuarios;
