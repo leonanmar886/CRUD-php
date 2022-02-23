@@ -1,0 +1,1 @@
+<?php header('location: src/paginas/read.php'); ?>
