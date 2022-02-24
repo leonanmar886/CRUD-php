@@ -3,7 +3,7 @@ require_once '../../config.php';
 require_once '../acoes/usuario.php';
 require_once '../modulos/mensagens.php';
 
-$usuario = readUsuario($coneccao);
+$usuario = readUsuario($coneccao); // chama a função que retorna todos os registros da tabela.
 
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ $usuario = readUsuario($coneccao);
                 <a class="btn btn-success text-white" href="./create.php">Novo</a>
             </div>
             <div class="row flex-center">
-                <?php if(isset($_GET['mensagem'])) echo(printMessage($_GET['mensagem'])); ?>
+                <?php if(isset($_GET['mensagem'])) echo(printMessage($_GET['mensagem'])); ?> <!-- Caso haja uma mensagem na url, ela será exibida -->
             </div>
 
             <table class="table-users">
@@ -30,7 +30,7 @@ $usuario = readUsuario($coneccao);
                     <th>NOME</th>
                     <th>EMAIL</th>
                 </tr>
-                <?php foreach($usuario as $row): ?>
+                <?php foreach($usuario as $row): ?> <!-- Loop para exibir todos os registros retornados da consulta. -->
                 <tr>
                     <td class="user-name"><?=$row['nome']?></td>
                     <td class="user-email"><?=$row['email']?></td>

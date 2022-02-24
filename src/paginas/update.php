@@ -2,10 +2,10 @@
 require_once '../../config.php';
 require_once '../acoes/usuario.php';
 
-if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["id"]))
-    updateUsuario($coneccao, $_POST["id"], $_POST["nome"], $_POST["email"]);
+if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["id"]))// verifica se as variáveis existem e estão preenchidas
+    updateUsuario($coneccao, $_POST["id"], $_POST["nome"], $_POST["email"]);//Chama a função update e passa como argumento os campos id, nome e email.
 
-$usuario = buscarUsuario($coneccao, $_GET['id']);
+$usuario = buscarUsuario($coneccao, $_GET['id']); // chama a função que retorna todos os campos de um registro
 
 ?>
 

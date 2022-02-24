@@ -2,8 +2,8 @@
 require_once '../../config.php';
 require_once '../acoes/usuario.php';
 
-if (isset($_POST["nome"]) && isset($_POST["email"]))
-    createUsuario($coneccao, $_POST["nome"], $_POST["email"]);
+if (isset($_POST["nome"]) && isset($_POST["email"])) // verifica se as variáveis existem e estão preenchidas
+    createUsuario($coneccao, $_POST["nome"], $_POST["email"]);// chama a função create e passa como argumentos os campos nome e email preenchidos no formulário.
 ?>
 
 <!DOCTYPE html>

@@ -1,6 +1,6 @@
 <?php
 
-function printMessage($mensagem){
+function printMessage($mensagem){ // Função que analisa a mensagem recebida, e retorna um span de acordo com ela.
     if($mensagem == "Create-sucesso")
         return '<span class="text-sucess"> Usuário criado com sucesso!</span>';
     if($mensagem == "Create-falha")

@@ -2,8 +2,8 @@
 require_once '../../config.php';
 require_once '../acoes/usuario.php';
 
-if(isset($_POST['id']))
-    deleteUsuario($connecao, $_POST['id']);
+if(isset($_POST['id'])) // verifica se a variável existe e não está nula
+    deleteUsuario($connecao, $_POST['id']); // chama a função que deleta um registro, e passa o id desse registro como parametro.
 
 ?>
 
@@ -25,7 +25,7 @@ if(isset($_POST['id']))
             <div class="row flex-center">
                 <div class="form-div">
                     <form class="form" action="../paginas/delete.php" method="POST">
-                        <label>Realmente deseja excluir este usuário ?</label>
+                        <label>Realmente deseja excluir este usuário ?</label> <!-- Mensagem de confirmação -->
                         <input type="hidden" name="id" value="<?=$_GET['id']?>" required/>
 
                         <button class="btn btn-success text-white" type="submit">Sim</button>
